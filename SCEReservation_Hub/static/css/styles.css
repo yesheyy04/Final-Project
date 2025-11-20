@@ -39,6 +39,7 @@ body {
     width: auto;
 }
 
+
 /* ===== NAVIGATION ===== */
 nav {
     background: #0077b6;
@@ -598,7 +599,7 @@ body.basketball-page {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 
     /* Smooth animation */
-    transition: 0.3s ease-in-out;
+    transition: 0.15s ease-in-out;
 }
 
 /* Hover Glow Effect */
@@ -633,7 +634,7 @@ body.basketball-page {
     text-decoration: none;
     font-weight: bold;
 
-    transition: 0.3s;
+    transition: 0.15s;
 }
 
 .btn:hover {
@@ -651,7 +652,7 @@ body.basketball-page {
 
     text-align: center;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    transition: 0.3s ease-in-out;
+    transition: 0.15s ease-in-out;
 }
 
 .result:hover {
@@ -683,7 +684,7 @@ body.basketball-page {
     text-decoration: none;
     font-weight: bold;
 
-    transition: 0.3s;
+    transition: 0.15s;
 }
 
 .btn:hover {
@@ -794,7 +795,7 @@ body {
 }
 
 .green {
-    background: #d5efcc;
+    background: #e9c0a6;
 }
 
 /* IMAGE RIGHT (ABOUT PAGE) */
@@ -834,7 +835,7 @@ body {
 }
 
 .team-card {
-    background: #ffffff;
+    background: #fff0e6;
     padding: 20px;
     border-radius: 25px;
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
@@ -936,4 +937,27 @@ body {
 
 .btn-submit:hover {
     background-color: #ff4c72;
+}
+/* ==============================
+   📱 RESPONSIVE DESIGN
+   ============================== */
+@media (max-width: 1024px) {
+    .nav-links { gap: 15px; }
+    #about img { width: 180px; height: 180px; }
+    section h2 { font-size: 1.6rem; }
+}
+
+@media (max-width: 768px) {
+    nav { flex-direction: column; text-align: center; gap: 10px; }
+    .nav-links { flex-direction: column; gap: 10px; }
+    #about img { width: 160px; height: 160px; }
+    form input, form textarea, form button { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+    body { font-size: 14px; }
+    .logo { font-size: 1.2rem; }
+    .nav-links a { font-size: 0.9rem; }
+    #about img { width: 120px; height: 120px; }
+    section h2 { font-size: 1.4rem; }
 }
