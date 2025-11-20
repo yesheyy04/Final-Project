@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Room - SCE Reservation Hub</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <img src="{% static 'images/left.jpg' %}" alt="Left Logo" class="header-logo" style="width:140px; height:auto;">
+    <h1>SCE Reservation Hub</h1>
+    <img src="{% static 'images/collegelogo.png' %}" alt="Right Logo" class="header-logo" style="width:90px; height:auto;">
+  </header>
+
+  <!-- NAVIGATION -->
+   <nav class="navbar">
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'rooms' %}">Rooms</a>
+    <a href="{% url 'sports' %}">Sports Courts</a>
+    <a href="{% url 'contact' %}">Contact</a>
+   </nav>
+
+  <!-- CONFERENCE ROOM -->
+  <section class="court-container">
+    <img src="{% static 'images/conference hall.jpg' %}" alt="Conference Room">
+    <div class="court-text">
+      <h2>Conference Room</h2>
+      <p>Professional setting for meetings, discussions, and presentations with modern equipment and connectivity options.</p>
+      <a href="{% url 'reservation' %}" class="book-btn">Reserve Now</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 SCE Reservation Hub</p>
+  </footer>
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

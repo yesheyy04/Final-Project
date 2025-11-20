@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCE Reservation Hub</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <img src="{% static 'images/left.jpg' %}" alt="Left Logo" class="header-logo"  style="width:140px; height:auto;">
+    <h1>SCE Reservation Hub</h1>
+    <img src="{% static 'images/collegelogo.png' %}" alt="Right Logo" class="header-logo" style="width:90px; height:auto;">
+</header>
+
+<!-- NAVIGATION -->
+ <nav class="navbar">
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'rooms' %}">Rooms</a>
+    <a href="{% url 'sports' %}">Sports Courts</a>
+    <a href="{% url 'contact' %}">Contact</a>
+</nav>
+
+  <!-- FOOTBALL GROUND -->
+  <section class="court-container">
+    <img src="{% static 'images/football.jpg' %}" alt="Football Ground">
+    <div class="court-text">
+      <h2>Football Ground</h2>
+      <p>A well-maintained football ground perfect for tournaments, practice sessions, and friendly matches.</p>
+      <a href="{% url 'reservation' %}" class="book-btn">Reserve Now</a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 SCE Reservation Hub</p>
+  </footer>
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

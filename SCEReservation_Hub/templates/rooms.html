@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCE Reservation Hub</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <img src="{% static 'images/left.jpg' %}" alt="Left Logo" class="header-logo" style="width:140px; height:auto;">
+    <h1>SCE Reservation Hub</h1>
+    <img src="{% static 'images/collegelogo.png' %}" alt="Right Logo" class="header-logo" style="width:90px; height:auto;">
+</header>
+
+<!-- NAVIGATION -->
+ <nav class="navbar">
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'rooms' %}">Rooms</a>
+    <a href="{% url 'sports' %}">Sports Courts</a>
+    <a href="{% url 'contact' %}">Contact</a>
+</nav>
+<!-- ROOMS SECTION -->
+<section id="rooms">
+    <div class="rooms-header">
+        <h2>Available Rooms & Facilities</h2>
+    </div>
+
+
+    <div class="rooms-container">
+
+        <!-- Multimedia Room -->
+        <a href="{% url 'multimedia' %}" class="room-card">
+            <img src="{% static 'images/multimedia.jpg' %}" alt="Multimedia Room">
+            <h3>Multimedia Room</h3>
+        </a>
+
+        <!-- Auditorium -->
+        <a href="{% url 'auditorium' %}" class="room-card">
+            <img src="{% static 'images/auditorium.jpg' %}" alt="Auditorium">
+            <h3>Auditorium</h3>
+        </a>
+
+        <!-- Conference Room -->
+        <a href="{% url 'conference' %}" class="room-card">
+            <img src="{% static 'images/conference hall.jpg' %}" alt="Conference Room">
+            <h3>Conference Room</h3>
+        </a>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 SCE Reservation Hub</p>
+</footer>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCE Reservation Hub</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <img src="{% static 'images/left.jpg' %}" class="header-logo" style="width:140px; height:auto;">
+    <h1>SCE Reservation Hub</h1>
+    <img src="{% static 'images/collegelogo.png' %}" class="header-logo" style="width:90px;height:auto;">
+</header>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'rooms' %}">Rooms</a>
+    <a href="{% url 'sports' %}">Sports Courts</a>
+    <a href="{% url 'contact' %}">Contact</a>
+</nav>
+
+<section id="reservation">
+    <h2>Reservation Form</h2>
+
+    <form id="reservationForm" method="POST" action="{% url 'make_reservation' %}">
+        {% csrf_token %}
+
+        <div class="form-row">
+            <label>Full Name:
+                <input type="text" name="name" required>
+            </label>
+            <label>College Email:
+                <input type="email" name="email" placeholder="Your SCE Email"
+                       pattern=".+\.sce@rub\.edu\.bt$"
+                       title="Email must contain .sce and end with @rub.edu.bt"
+                       required>
+            </label>
+        </div>
+
+        <div class="form-row">
+            <label>Contact Number:
+                <input type="tel" name="contact" pattern="[0-9]{8,}" required>
+            </label>
+            <label>Choose Facility:
+                <select name="resource" required>
+                    <option value="">-- Select Facility --</option>
+                    <option value="Auditorium">Auditorium</option>
+                    <option value="Conference Hall">Conference Hall</option>
+                    <option value="Multimedia Room">Multimedia Room</option>
+                    <option value="Basketball Court">Basketball Court</option>
+                    <option value="Football Court">Football Court</option>
+                    <option value="Volleyball Court">Volleyball Court</option>
+                    <option value="Badminton Hall">Badminton Hall</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="form-row">
+            <label>Date:
+                <input type="date" name="date" required>
+            </label>
+            <label>Start Time:
+                <input type="time" name="start_time" required>
+            </label>
+            <label>End Time:
+                <input type="time" name="end_time" required>
+            </label>
+        </div>
+
+        <button class="btn" type="submit">Submit Reservation</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 SCE Reservation Hub</p>
+</footer>
+
+</body>
+</html>

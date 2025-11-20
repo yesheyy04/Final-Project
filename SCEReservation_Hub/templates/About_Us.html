@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCE Reservation Hub</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <img src="{% static 'images/left.jpg' %}" alt="Left Logo" class="header-logo" style="width:140px; height:auto;">
+    <h1>SCE Reservation Hub</h1>
+    <img src="{% static 'images/collegelogo.png' %}" alt="Right Logo" class="header-logo" style="width:90px; height:auto;">
+</header>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'rooms' %}">Rooms</a>
+    <a href="{% url 'sports' %}">Sports Courts</a>
+    <a href="{% url 'contact' %}">Contact</a>
+</nav>
+
+
+<!-- MAIN CONTENT -->
+<section class="container">
+
+    <!-- About -->
+    <h2 class="section-title">About Us</h2>
+
+    <div class="row">
+        <div class="text box peach">
+            <p>
+                Welcome to the Samtse College of Education Sports Court & Rooms Reservation System!
+                Our platform makes it easy and accessible for students, staff, faculty, and guests
+                to reserve sports facilities and rooms. From basketball courts and football grounds
+                to multimedia rooms and guest house, bookings are fast, fair, and transparent.
+            </p>
+        </div>
+
+        <div class="image-box">
+            <img src="{% static 'images/about us.jpg' %}" alt="Booking illustration">
+        </div>
+    </div>
+
+    <!-- Mission -->
+    <h3 class="section-title sub">Our Mission</h3>
+
+    <div class="row">
+        <div class="text box green">
+            <p>
+                To encourage active participation in sports, fitness, and collaborative activities
+                by providing a simple and reliable reservation system.
+            </p>
+        </div>
+    </div>
+
+ <h3 class="section-title sub red">What We Offer</h3>
+
+<div class="row">
+    <div class="text box pink">
+        <ul class="offer-list">
+            <li>Sports Courts – Basketball, football, volleyball, and badminton hall reservations.</li>
+            <li>Rooms & Halls – Multimedia room, guest houses reservations.</li>
+            <li>Fair Access – Equal opportunities for all users.</li>
+            <li>Convenience – Quick bookings with real-time availability.</li>
+        </ul>
+    </div>
+    <div class="image-box">
+        <img src="{% static 'images/whychoose us.jpg' %}" alt="What We Offer illustration">
+    </div>
+</div>
+
+
+    <!-- TEAM SECTION -->
+    <h3 class="section-title sub red">Meet Our Team</h3>
+
+    <div class="team-grid">
+
+        <!-- Tshering Lhamo -->
+        <div class="team-card">
+            <div class="team-img">
+                <img src="{% static 'images/Tshering Lhamo.jpg' %}" alt="Tshering Lhamo">
+            </div>
+            <h4>Tshering Lhamo</h4>
+            <p>
+                Tshering ensures smooth coordination within the team and contributes to 
+                planning and structuring the reservation system. She focuses on clarity, 
+                teamwork, and user-friendly features.
+            </p>
+        </div>
+
+        <!-- Yeshey Peldon -->
+        <div class="team-card">
+            <div class="team-img">
+                <img src="{% static 'images/Yeshi Peldon.jpg' %}" alt="Yeshey Peldon">
+            </div>
+            <h4>Yeshey Peldon</h4>
+            <p>
+                Yeshey works on content development and quality assurance. She makes sure 
+                information on the platform is accurate, clear, and helpful for every user.
+            </p>
+        </div>
+
+        <!-- Phub Lham -->
+        <div class="team-card">
+            <div class="team-img">
+                <img src="{% static 'images/Phub Lham.jpg' %}" alt="Phub Lham">
+            </div>
+            <h4>Phub Lham</h4>
+            <p>
+                Phub contributes to user interface planning and visual design elements.  
+                She helps ensure the platform looks appealing and is easy to navigate.
+            </p>
+        </div>
+
+        <!-- Sujal Gurung -->
+        <div class="team-card">
+            <div class="team-img">
+                <img src="{% static 'images/sujal Gurung.jpg' %}" alt="Sujal Gurung">
+            </div>
+
+<h4>Sujal Gurung</h4>
+            <p>
+                Sujal focuses on technical structure and smooth functioning of the system.  
+                He helps implement practical features and ensures the site runs efficiently.
+            </p>
+        </div>
+
+        <!-- Samten Choden -->
+        <div class="team-card">
+            <div class="team-img">
+                <img src="{% static 'images/Samtsen choden.jpg' %}" alt="Samten Choden">
+            </div>
+            <h4>Samten Choden</h4>
+            <p>
+                Samten works on layout design, overall presentation, and project coordination.  
+                She ensures the final outcome is polished, organized, and meets project goals.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 SCE Reservation Hub</p>
+</footer>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

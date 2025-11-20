@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCE Reservation Hub</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <img src="{% static 'images/left.jpg' %}" alt="Left Logo" class="header-logo" style="width:140px; height:auto;">
+    <h1>SCE Reservation Hub</h1>
+    <img src="{% static 'images/collegelogo.png' %}" alt="Right Logo" class="header-logo" style="width:90px; height:auto;">
+</header>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'rooms' %}">Rooms</a>
+    <a href="{% url 'sports' %}">Sports Courts</a>
+    <a href="{% url 'contact' %}">Contact</a>
+</nav>
+
+<!-- SPORTS COURTS SECTION -->
+<section id="sports-courts">
+    <h2>Available Games</h2>
+
+    <div class="sports-container">
+
+    <!-- Basketball -->
+    <a href="{% url 'basketball' %}" class="sport-card basketball">
+        <img src="{% static 'images/basketball.jpg' %}" alt="Basketball Court">
+        <h3>Basketball Court</h3>
+    </a>
+
+    <!-- Football -->
+    <a href="{% url 'football' %}" class="sport-card football">
+        <img src="{% static 'images/football.jpg' %}" alt="Football Ground">
+        <h3>Football Ground</h3>
+    </a>
+
+    <!-- Volleyball -->
+    <a href="{% url 'volleyball' %}" class="sport-card volleyball">
+        <img src="{% static 'images/volleyball.jpg' %}" alt="Volleyball Court">
+        <h3>Volleyball Court</h3>
+    </a>
+
+    <!-- Badminton -->
+    <a href="{% url 'badminton' %}" class="sport-card badminton">
+        <img src="{% static 'images/badminton.jpg' %}" alt="Badminton Hall">
+        <h3>Badminton Hall</h3>
+    </a>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 SCE Reservation Hub</p>
+</footer>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
